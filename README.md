@@ -59,3 +59,19 @@ FakeSkiffPersistence.prototype._createWriteStream = function(nodeId) {
 
 ## Test
 
+You can use this module to test your Skiff Persistence provider:
+
+```javascript
+'use strict';
+
+var test = require('abstract-skiff-persistence/test/all');
+
+var FakeSkiffPersistence = require('../');
+var p = new FakeSkiffPersistence();
+
+test(p);
+```
+
+# License
+
+ISC
