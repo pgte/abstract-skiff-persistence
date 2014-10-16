@@ -20,10 +20,7 @@ function saveMetaTests(p) {
     }, saved);
 
     function saved(err) {
-      t.ok(! err);
-      if (err) {
-        throw err;
-      }
+      t.ok(! err, err && err.message);
       t.end();
     }
   });

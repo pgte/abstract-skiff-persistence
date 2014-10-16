@@ -4,7 +4,7 @@
   "description": "Abstract Skiff Persistence provider",
   "main": "lib/index.js",
   "scripts": {
-    "test": "istanbul cover test.js && istanbul check-coverage --statements 95 --functions 93 --lines 95 --branches 85",
+    "test": "istanbul cover test.js && istanbul check-coverage --statements 80 --functions 75 --lines 80 --branches 50",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "codestyle": "jscs -p google lib/",
     "coverage": "open coverage/lcov-report/index.html"
@@ -28,6 +28,11 @@
   },
   "pre-commit": [
     "codestyle",
-    "jshint"
-  ]
+    "jshint",
+    "test"
+  ],
+  "dependencies": {
+    "async": "^0.9.0",
+    "colors": "^1.0.3"
+  }
 }
