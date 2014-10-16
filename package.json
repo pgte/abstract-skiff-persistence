@@ -1,6 +1,6 @@
 {
   "name": "abstract-skiff-persistence",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "description": "Abstract Skiff Persistence provider",
   "main": "lib/index.js",
   "scripts": {
