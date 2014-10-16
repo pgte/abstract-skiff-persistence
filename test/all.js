@@ -29,7 +29,7 @@ function testAll(p, options) {
   tests.forEach(function(t) {
     var d = domain.create();
     d.on('error', function(err) {
-      console.error(err.backtrace || err.message || err);
+      console.error((err.stack || err.message || err.toString()).red);
       process.exit(1);
     });
     d.run(function() {
