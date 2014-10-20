@@ -79,6 +79,18 @@ test('createWriteStream extensibility', function(t) {
   t.end();
 });
 
+test('close extensibility', function(t) {
+  var p = new ASP();
+  var args = [function() {
+    t.end();
+  }];
+  p._close = function(cb) {
+    t.deepEqual(toArray(arguments), args);
+    cb();
+  };
+  p.close.apply(p, args);
+});
+
 function toArray(args) {
   return Array.prototype.slice.call(args);
 }

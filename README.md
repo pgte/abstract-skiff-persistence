@@ -59,6 +59,10 @@ FakeSkiffPersistence.prototype._createWriteStream = function(nodeId) {
 FakeSkiffPersistence.prototype._removeAllState = function(nodeId, callback) {
   // ...
 };
+
+FakeSkiffPersistence.prototype._close = function(callback) {
+  // ...
+};
 ```
 
 ## Test
