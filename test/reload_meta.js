@@ -2,10 +2,10 @@
 
 var test = require('tape');
 
-module.exports = loadMetaTests;
+module.exports = reloadMetaTests;
 
-function loadMetaTests(p) {
-  test('loads meta', function(t) {
+function reloadMetaTests(p) {
+  test('reloads meta', function(t) {
     p.loadMeta('node id', loaded);
 
     function loaded(err, state) {
@@ -37,7 +37,7 @@ function loadMetaTests(p) {
             },
             {
               index: 3,
-              command: 'entry 3',
+              command: 'entry 3 redone',
             }
           ],
         },

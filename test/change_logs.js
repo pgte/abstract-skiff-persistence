@@ -22,15 +22,15 @@ function saveMetaTests(p) {
             index: 1
           },
           {
-            command: 'entry 2',
+            command: 'entry 2 should not be saved',
             uuid: 'a very special uuid',
             index: 2
           },
           {
-            command: 'entry 3',
+            command: 'entry 3 redone',
             uuid: uuid(),
             index: 3
-          }
+          },
         ]
       },
       peers: ['peer 1', 'peer 2']

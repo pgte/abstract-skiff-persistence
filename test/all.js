@@ -7,6 +7,8 @@ var domain = require('domain');
 var tests = [
   'save_meta',
   'load_meta',
+  'change_logs',
+  'reload_meta',
   'apply_command',
   'verify_commands',
   'last_applied_commit_index',
